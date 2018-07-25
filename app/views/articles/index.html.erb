@@ -1,25 +1,39 @@
 <h1>Articles:</h1>
 </br>
-<% @articles.each do |article| %>
+
+<% if @articles.any? %>
+  <% @articles.each do |article| %>
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="well well-lg">
+          <div class="article-title">
+            <%= link_to article.title , article_path(article) %>
+          </div>
+          <div class="article-body">
+            <%= truncate(article.description, length: 100) %>
+          </div>
+          <div class="article-actions">
+            <%= link_to "Edit This Article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete This Article", article_path(article), method: :delete, 
+            data: { confirm: "Are you sure you want to delete the article?" }, class: "btn btn-xs btn-danger" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  
+  <% else %>
   <div class="row">
-    <div class="col-xs-8">
-      <div class="well well-lg">
-        <div class="article-title">
-          <%= link_to article.title , article_path(article) %>
-        </div>
-        <div class="article-body">
-          <%= truncate(article.description, length: 100) %>
-        </div>
-        <div class="article-actions">
-          <%= link_to "Edit This Article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
-          <%= link_to "Delete This Article", article_path(article), method: :delete, 
-          data: { confirm: "Are you sure you want to delete the article?" }, class: "btn btn-xs btn-danger" %>
+    <div class="col-xs-3">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title">
+            There are no articles to display.
+          </h2>
         </div>
       </div>
     </div>
   </div>
 <% end %>
 
-<div>
-  <%= link_to "Create new article", new_article_path, class: "btn btn-primary" %>
-</div>
+<%= link_to "Create new article", new_article_path, class: "btn btn-primary" %>
