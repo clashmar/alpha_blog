@@ -50,7 +50,25 @@ $navbar-default-bg: #0f2e60;
   color: #FFFFFF; 
   background-color: #25719E; 
   border-color: #25719E; 
-} 
+}
+
+.btn-danger {
+  margin-top: 20px;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 footer {
   margin-top: 45px;
