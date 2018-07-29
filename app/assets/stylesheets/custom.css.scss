@@ -111,3 +111,26 @@ footer ul li {
 #article-user {
   padding-left: 0;
 }
+
+.tab-menu {
+  margin-top: 20px;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 20px;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: .06px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.active-tab {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: black;
+    font-size: 25px;
+}

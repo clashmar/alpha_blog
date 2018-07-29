@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
+  
+  get 'users/:id/articles', to: 'users#article', as: :tab
+  resources :profiles
+  
 end

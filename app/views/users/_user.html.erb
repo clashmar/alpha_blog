@@ -1,0 +1,19 @@
+<h1><%= @user.username %></h1>
+</br>
+<div class="row">
+  <div class="col-md-4">
+    <%= gravatar_for @user, size: 80 %>
+  </div>
+</div>
+</br>
+
+<div class="tab-menu">
+  <div class="tab-menu-item"></div>
+    <div class="tab-menu-item" id="tab-item">
+      <%= link_to "Overview", user_path(@user), :onclick => 'activeTab' %>
+    </div>
+    <div class="tab-menu-item">
+      <%= link_to "Articles", tab_path(@user) %>
+    </div>
+</div>
+</br>
