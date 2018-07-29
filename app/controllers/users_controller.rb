@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @tab = 'overview'
   end
   
   def index
@@ -37,6 +38,7 @@ class UsersController < ApplicationController
   
   def article
     @user = User.find(params[:id])
+    @tab = 'articles'
   end
   
   private

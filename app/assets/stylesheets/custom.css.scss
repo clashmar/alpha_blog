@@ -119,7 +119,7 @@ footer ul li {
 .tab-menu-item {
   float: left;
   margin-right: 20px;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 15px;
   letter-spacing: .06px;
   text-transform: uppercase;
@@ -128,9 +128,6 @@ footer ul li {
 }
 
 .active-tab {
-    width: 100%;
-    padding: 25px;
-    background-color: coral;
-    color: black;
-    font-size: 25px;
+  color: black;
+  font-weight: bold;
 }

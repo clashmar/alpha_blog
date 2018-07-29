@@ -8,12 +8,15 @@
 </br>
 
 <div class="tab-menu">
-  <div class="tab-menu-item"></div>
-    <div class="tab-menu-item" id="tab-item">
-      <%= link_to "Overview", user_path(@user), :onclick => 'activeTab' %>
+    <div class="tab-menu-item">
+      <div class="<%= 'active-tab' if @tab == 'overview' %>">
+        <%= link_to "Overview", user_path(@user) %>
+      </div>
     </div>
     <div class="tab-menu-item">
-      <%= link_to "Articles", tab_path(@user) %>
+      <div class="<%= 'active-tab' if @tab == 'articles' %>">
+        <%= link_to "Articles", tab_path(@user) %>
+      </div>
     </div>
 </div>
 </br>
