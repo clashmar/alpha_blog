@@ -1,4 +1,11 @@
 <%= render 'users/user' %>
 </br>
 
-<%= render 'articles/article', obj: @user.articles %>
+<div>
+  <%= will_paginate @articles %>
+</div>
+
+<%= render 'articles/article', obj: @articles %>
+
+
+

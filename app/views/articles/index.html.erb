@@ -1,6 +1,14 @@
 <h1>Articles:</h1>
-</br>
+
+<div>
+  <%= will_paginate %>
+</div>
 
 <%= render 'article', obj: @articles %>
+
+<div>
+  <%= will_paginate %>
+</div>
+
 
 <%= link_to "Create new article", new_article_path, class: "btn btn-primary" %>
