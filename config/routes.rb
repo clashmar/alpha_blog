@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   get 'users/:id/articles', to: 'users#article', as: :tab
   resources :profiles
   
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  
 end
